@@ -1,0 +1,114 @@
+<script>
+document.querySelectorAll('.hotel').forEach(item => {
+    item.addEventListener('click', event => {
+        document.getElementById('bookingForm').style.display = 'block';
+        document.getElementById('message').innerHTML = '';
+    });
+});
+
+document.getElementById('bookHotelForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const checkIn = document.getElementById('checkIn').value;
+    const checkOut = document.getElementById('checkOut').value;
+
+    
+    if (!name || !email || !checkIn || !checkOut) {
+        document.getElementById('message').innerHTML = '<p id="error">Please fill in all fields</p>';
+        return;
+    }
+
+  
+    setTimeout(function() {
+        document.getElementById('message').innerHTML = '<p>Booking successful! Thank you, ' + name + '!</p>';
+    }, 1000);
+});
+</script>
+<style>
+div.img3{
+opacity:1;
+}
+.button2 {background-color: #808000;} /* olive*/
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.hotel-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.hotel {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    background-color: #fff;
+    transition: background-color 0.3s ease;
+}
+.hotel img {
+    width: 30%;
+    height: auto;
+    border-radius: 5px;
+}
+.hotel:hover {
+    background-color: #f0f0f0;
+}
+
+#bookingForm {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin-top: 20px;
+    background-color: #fff;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+button {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#error {
+    color: red;
+}
+</style>
+  </body>
+</html>
