@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+  </head>
+  <body>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Booking</title>
+    <link rel="stylesheet" href="prototype style.css">
+</head>
+<body>
+  
+     <button class="button button2"onclick="document.location='Homescren.html'">Back</button>
+    <div class="container">
+        <h1>Choose a Hotel</h1>
+        <div class="hotel-list">
+            <div class="hotel" id="hotel1">
+            <a href="#">Okada Manila Hotel</a>
+                <div class="img3">
+                <img src="1.jpeg" alt="Hotel1" width="50" height="50">
+                              <img src="1.jpeg" alt="Hotel1" width="50" height="50">
+                </div>
+                <p>Php.13,000 per night</p>
+                <p>The rooms and suites at Okada Manila are all air-conditioned and come with a seating area with a flat-screen cable TV. Each room is also equipped with a wardrobe, a safety deposit box, and a desk. Some rooms are fitted with a sofa seating along with a dining area. The rooms feature views of the bay or the swimming pool. Included in the en suite bathroom is a bathtub with free bath amenities, while some rooms have their own private massage room.</p>
+            </div>
+           <div class="hotel" id="hotel2">
+                <a href="#">Manila Marriot Hotel</a>
+                <div>
+                              <img src="2.jpeg" alt="Hotel2" width="50" height="50">
+                              <img src="2.jpeg" alt="Hotel2" width="50" height="50">
+                  </div>            
+                <p>Php.15,000 per night</p>
+                <p>Description: Manila Marriott Hotel boasts a coveted location in Newport World Resorts. When you stay at our luxury Manila, Philippines, hotel, expect contemporary elegance and well-appointed accommodations with deluxe bedding, marble bathrooms and modern technology. Elevate your stay in a spacious suite in our hotel's West Wing.</p>
+            </div>
+            <div class="hotel" id="hotel3">
+                <a href="#">Luxury Manila Hotel</a>
+                <div>
+                              <img src="3.jpeg" alt="Hotel3" width="50" height="50">
+                              <img src="3.jpeg" alt="Hotel3" width="50" height="50">
+                </div>              
+                <p>php.11,900 per night</p>
+                Description:Located along Manila Bay, a 30-minute drive from Ninoy Aquino International Airport stands 5-star Diamond Hotel Philippines. It boasts a spectacular free-form pool, tennis courts and a spa with reflexology treatments.
+                
+                The air-conditioned rooms are bright with large windows and spacious interiors. They have cable TV, a minibar and a seating area with sofa set. Selected rooms offer great views of the bay.
+                
+                Luxurious massages and body treatments await guests at the spa. They can also work out at Diamond Hotel’s well-equipped fitness centre or relax at the outdoor spa pool.
+                
+                Enjoy views of a tropical garden with delicate Japanese dishes at the award-winning Yurakuen Japanese Restaurant. Corniche Restaurant provides an international menu, while the Sky Lounge Music Bar offers a variety of beverages. Room service is available.</p>
+            </div>
+        </div>
+        <div id="bookingForm" style="display: none;">
+            <h2>Booking</h2>
+            <form id="bookHotelForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+                <label for="checkIn">Check-In Date:</label>
+                <input type="date" id="checkIn" required>
+                <label for="checkOut">Check-Out Date:</label>
+                <input type="date" id="checkOut" required>
+                <button type="submit">Book Now</button>
+            </form>
+            <div id="message"></div>
+        </div>
+    </div>
+
+</body>
+</html>
